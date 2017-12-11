@@ -1,0 +1,11 @@
+#!/bin/bash
+
+xterm -hold -e "java -classpath bin/ DCBMThread chat6.xml" & sleep 1
+xterm -hold -e "java -classpath bin/ DCBMThread chat7.xml" & sleep 1
+xterm -hold -e "java -classpath bin/ DCBMThread chat8.xml" & sleep 1
+xterm -hold -e "java -classpath bin/ DCBMThread chat9.xml" & sleep 1
+xterm -hold -e "java -classpath bin/ DCBMThread chat5.xml"
+
+
+
+
