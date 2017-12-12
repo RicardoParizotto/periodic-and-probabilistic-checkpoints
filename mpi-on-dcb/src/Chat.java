@@ -201,14 +201,15 @@ public class Chat extends javax.swing.JFrame {
         if(totalRollbacks == 0 || totalEventos == 0 ) mediaEventosRollback = 1.;
         else                                          mediaEventosRollback = ((double)totalEventos/(totalRollbacks));
 
-        /*
+        
 		if(quantidadeEventosPrevistos > 0 )           ProbabilidadeRollback = ( quantidadeEventosPrevistos + eventosDesdeRollback)/mediaEventosRollback;
 		else                                          ProbabilidadeRollback = 0;
-		*/
+		
 
+        /*
         if(quantidadeEventosPrevistos > 0 )           ProbabilidadeRollback = mediaEventosRollback;
         else                                          ProbabilidadeRollback = 0;
-
+        */
 
         /*teste*/
 		//alpha é distribuído em um intervalo [0.0, 1.0]
@@ -580,7 +581,7 @@ public class Chat extends javax.swing.JFrame {
         @Override
         public void run() {
             chatLVTaux = chatLVT;
-            int num;
+            int num=0;
 
 			Instant start = Instant.now();
 
@@ -606,11 +607,30 @@ public class Chat extends javax.swing.JFrame {
                 aux = new Integer(chatLVT);
                 //lookahead de 100
 
-                num = gerador.nextInt(500);        
-                aux = aux + num;
+                switch(id){//cada chat enviará uma série de mensagens
+                    case 5:
+                        num = 75;
+                        //////////////////////////////////////////////////////////////chat 5         
+                        break;
+                    case 6:
+                        num = 100;
+                        //////////////////////////////////////////////////////////////chat 6
+                        break;
+                    case 7: 
+                        num = 150;
+                        //////////////////////////////////////////////////////////////chat 7
+                        break;
+                    case 8:
+                        num = 200;
+                        break; 
+                    case 9:
+                        num = 200;
+                        ////////////////////////////////////////////////////////////// chat 9
+                        break;   
+                }
 
+                aux = aux + num;
                 chatLVT = GatewayMPI.updateLVT(aux.toString());
-                
                 
                 if(Integer.valueOf(chatLVT) > GatewayMPI.App.NewDCB.simulationTime ){
 				    Instant end = Instant.now();
