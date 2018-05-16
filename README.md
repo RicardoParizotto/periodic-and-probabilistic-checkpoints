@@ -23,12 +23,10 @@ Type $run to start the simulation. If it doesn’t work for you, check if you ha
 If you do not have DCB running, try running each of the chats <chat_name> manually with command: 
 
 
-*$ java -classpath bin/ DCBMThread <chat_name>.xml
+$ java -classpath bin/ DCBMThread <chat_name>.xml
 
 
-
-Run each of the chats in different terminal instances. Chat5 must be the last one. He is the one that pull the simulation start trigger.
-
+Run each of the chats in different terminal instances. Chat5 must be the last one (He triggers the simulation start).
 
 
 # 3 -Developers
@@ -42,7 +40,6 @@ Please, note that there are no fedgvt in this version. Zanuzzo’s version have 
 
 
 There’s a need of a simple tutorial to explain how to edit the .xml files.
-
 There’s also a need for a tutorial that explains how to increase the number of components and how to change their behavior
 
 
