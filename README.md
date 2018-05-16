@@ -1,6 +1,6 @@
 # periodic-and-probabilistic-checkpoints
 
-DCB is a prototype of a backbone to distributed and heterogeneous simulations. It's designed to support execution of simulation models divided into different nodes of a network. A behavior model can be divided into chunks and distributed among the nodes. Both updating model and synchronising barrier is performed in a distributed way. 
+DCB is a prototype of a backbone to distributed and heterogeneous discrete event simulations. It's designed to support execution of simulation models divided into different nodes of a network. A behavior model can be divided into chunks and distributed among the nodes. Both updating model and synchronising barrier is performed in a distributed way. 
 
 This code has been used by undergraduate students to study the architecture of this kind of system, considering subjects like lookahead, GVT and checkpointing algorithms. The actual version of this code has a simple network message passing system implemented where the frequency of message exchange is synthetic and do not represent any real system behavior. 
 
