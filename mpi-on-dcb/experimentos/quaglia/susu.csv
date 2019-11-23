@@ -1,3 +1,4 @@
+id, totalRollbacks, tempoRollbacks, inuteis, tentativas, indice, totalCheckpoints, tempo
 5,0,0,0,796,796,796,13M16.14S
 6,2,17843,1,870,836,812,13M44.362S
 7,6,48806,8,945,841,780,13M58.468S

@@ -10,9 +10,9 @@ cktpe <- mean(pe$totalCheckpoints, na.rm=TRUE)
 cktperiodic <- mean(periodic$totalCheckpoints, na.rm=TRUE)
 
 
-jpeg(filename="/home/aluno-uffs/bosta/periodic-and-probabilistic-checkpoints/checkpoints.jpeg")
+jpeg(filename="/home/ricardo/checkpoints.jpeg")
 
-barplot(c(cktperiodic, cktprob, cktqua, cktpe), xpd = F, density=c(20,20,20,20), col="brown", border="brown", beside=T, ylab="Checkpoints created", ylim=c(700, 1000), font.lab=2, names.arg=c("Periodic","Probabilistic","Quaglia", "Probabilistic(PE)"))
+barplot(c(cktperiodic, cktprob, cktqua), xpd = F,beside=T, ylab="# of Checkpoints", ylim=c(700, 1000), font.lab=2, names.arg=c("Static","Heuristic","Quaglia"),  space=1, cex.names=1.5, cex.lab=1.5, cex.axis=1.5)
 
 
 dev.off()
